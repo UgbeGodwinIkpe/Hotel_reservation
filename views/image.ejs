@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Upload image</h2>
+        <%= typeof msg != 'undefinded' ? msg : '' %>
+            <form method="post" action="/upload" enctype="multipart/form-data">
+                <div>
+                    <span style="background-color: black; color: blanchedalmond; font-size: x-large;">File</span>
+                    <input type="file" name="myImage">
+
+                </div>
+                <div>
+                    <input type="submit" label="submit">
+                </div>
+
+            </form>
+            <img src="<%= typeof image != 'undefinded' ? image : '' %>">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>CIDUSFACE HOTEL</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top desktop-view">
+        <h1>CIDUSFACE HOTEL</h1>
+        <button class="btn active btn-primary" href="#">Home</button>
+        <button class="btn btn-"> <a class="dropdown-item" href="/register" style="color: white;">Create account</a></button>
+        <button class="btn btn-"> <a class="dropdown-item" href="/login" style="color: white;">Login</a></button>
+        <button class="btn btn-"> <a class="dropdown-item" href="/booking" style="color: white;">Make Reservation</a>
+        <button class="btn btn-" > <a class="dropdown-item" href="/innerview" style="color: white;">Rooms</a></button>
+    </nav><br><br>
+
+    <!-- Mobile navbar -->
+    <div class="mobile-container mobile-nav" style="background-color: rgba(0, 0, 0, 0.534) !important;">
+        <div class="topnav">
+            <a href="#home" class="active" style="font-size: x-large;">CIDUSFACE HOTEL</a>
+            <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+            <br>
+            <div id="myLinks">
+                <a href="/register">Create account</a>
+                <a href="/login">Login</a>
+                <a href="/booking">Make Reservation</a>
+                <a href="/innerview">Rooms</a>
+            </div>
+
+        </div>
+    </div>
+    <script src="/script.js"></script>
+    <% if(welcome_msg !== ''){%>
+        <div class='container alert alert-info alert-dismissible' style="width: fit-content; color:darkorange; font-size: large;">
+            <%- welcome_msg %>
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">   &times;</a>
+        </div>
+        <%}%>
+            <div class="row desktop-view">
+                <div class="col-7" style="color: rgb(232, 238, 241) !important; font-size: large; margin-left: 30px;">
+                    <div>
+                        <i class="fa fa-map-marker-alt" aria-hidden="true" style="font-size: xx-large; color: crimson;"></i>
+                        <Span>201 High way Calabar, Cross River State</Span>
+                    </div>
+                    <div>
+                        <p>Registered as a new customer before proceeding to booking/reservation section to get a VIP welcome...</p>
+                        <p>Already a user, click <a href="/login">login</a> and enter your email and password, and proceed to booking session to make reservation</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card myb" style="color: black; font-size: small; background-color: burlywood; width:fit-content; height: fit-content;">
+                        <div class="card-header" style="text-align: center;">Make Reservation</div>
+                        <form>
+                            Check-in <input type="date"> Check-out
+                            <input type="date"><br> Rooms
+                            <input type="number"> No. of persons<input type="number">
+                        </form><br>
+                        <button class="btn btn-primary "><a href="/booking " style="color: white;">Reserve now</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card container-fluid avaliability" style="background-color: rgb(248, 248, 245); width: 30%; float: left; margin-left: 30px;">
+                <div class="card-header container" style="color: black; text-align: center;">
+                    <h4>AVAILABILITY</h4>
+                    <p1>The Hotel contain <b>1500</b> Rooms.</p1>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <p1 style="color: green;"><b>Room Categories and Prices Per Day</b></p1><br>
+                        <p2>Lower suites: <b style="color: red;">N5000</b></p2><br>
+                        <p3>Middle suites: <b style="color: red;">N10000</b></p3><br>
+                        <p3>Higher suites: <b style="color: red;">N15000</b></p3>
+                    </div>
+                    <div class="col-6" style="background-color: indigo;">
+                        <ul style="font-style: italic; color: darkgoldenrod; margin: 0; ">
+                            <p>Our services</p>
+                            <ol>Accommodation</ol>
+                            <ol>Bar/Restaurant</ol>
+                            <ol>Laundry</ol>
+                            <ol>Games</ol>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <!-- Mobile view -->
+            <div class="mobile-container container">
+                <div class=" style=" color: rgb(232, 238, 241) !important; font-size: large; margin-left: 30px; ">
+                    <div>
+                        <i class="fa fa-map-marker-alt " aria-hidden="true " style="font-size: xx-large; color: crimson; "></i>
+                        <Span>201 High way Calabar, Cross River State</Span>
+                    </div>
+                    <div style="margin-left: 5px; margin-right: 10px; ">
+                        <p>Registered as a new customer before proceeding to booking/reservation section to get a VIP welcome...</p>
+                        <p>Already a user, click <a href="/login " style="text-decoration: none; background-color: none!important; ">login</a> and enter your email and password, and proceed to booking session to make reservation</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="card myb " style="color: black; font-size: small; background-color: burlywood; width:fit-content; height: fit-content; ">
+                        <div class="card-header " style="text-align: center; ">Make Reservation</div>
+                        <form>
+                            Check-in<input type='date'><br>Check-out
+                            <input type='date'><br>Rooms
+                            <input type='number'><br> No. of persons<input type='number'>
+                        </form>
+                        <button class="btn btn-primary "><a href="/booking " style="color: white; ">Reserve now</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="avalibility ">
+                <div class=" container " style="color: black; text-align: center; ">
+                    <h4>AVAILABILITY</h4>
+                    <p1>The Hotel contain <b>1500</b> Rooms.</p1>
+                </div>
+                <div class="row ">
+                    <div class="col-sm-6 ">
+                        <p1 style="color: green; "><b>Room Categories and Prices Per Day</b></p1><br>
+                        <p2>Lower suites: <b style="color: red; ">N5000</b></p2><br>
+                        <p3>Middle suites: <b style="color: red; ">N10000</b></p3><br>
+                        <p3>Higher suites: <b style="color: red; ">N15000</b></p3>
+                    </div>
+                    <div class="col-sm-5 " style="background-color: indigo; font-style: italic; color: darkgoldenrod; margin: 0; ">
+                            <p>Our services: Accommodation, Bar/Restaurant, Laundry, Games ect</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous "></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous "></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous "></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js " integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0 " crossorigin="anonymous "></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js " integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi " crossorigin="anonymous "></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js " integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0 " crossorigin="anonymous "></script>
+</body>
+
+<footer class="desktop-view ">
+    <div class="container ">Copyright @ 2021 All rights Reserved. Power by <b>Nugi Technologies.</b>
+        <span>
+            Connect with us:
+            <i class="fa fa-mobile "></i> +2348127087575
+            <i class="fa fa-envelope "></i> Cidusface@yahoo.com
+            <a href="https://www.facebook.com/godwin.ugbe.52 "><i class="fab fa-facebook "></i></a>
+            <a href="https://twitter.com/IkpeUgbe "><i class="fab fa-twitter "></i></a>
+            <a href="https://web.skype.com/ "><i class="fab fa-skype "></i></a>
+        </span>
+    </div>
+</footer>
+<footer class="mobile-container ">
+    <div class="container " style="font-size: xx-small; ">Copyright @ 2021 All rights Reserved. Power by <b>Nugi Technologies.</b>
+        <span>
+            Connect with us:
+            <i class="fa fa-mobile "></i> +2348127087575
+            <i class="fa fa-envelope "></i> Cidusface@yahoo.com
+            <a href="https://www.facebook.com/godwin.ugbe.52 "><i class="fab fa-facebook "></i></a>
+            <a href="https://twitter.com/IkpeUgbe "><i class="fab fa-twitter "></i></a>
+            <a href="https://web.skype.com/ "><i class="fab fa-skype "></i></a>
+        </span>
+    </div>
+</footer>
+</html>

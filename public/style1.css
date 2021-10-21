@@ -1,0 +1,231 @@
+nav {
+    background-color: rgba(84, 93, 94, 0.459);
+    color: #af1337 !important;
+    padding: 5px 30px;
+    display: flex;
+    justify-content: flex-end;
+    position: static;
+    top: 0;
+    width: 100%;
+    /* height: 80px; */
+}
+
+nav .dropdown button {
+    color: white;
+    background-color: black;
+    font-size: large;
+}
+
+.container {
+    align-content: center;
+    color: rgb(17, 17, 17);
+}
+
+.image .image-responsive img {
+    height: 25rem;
+    width: 22rem;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+
+/* teams section styling */
+
+
+/*.teams .title::after {
+    content: "INNER-VEIW";
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+
+.teams .carousel .card {
+    /* border-radius: 6px;
+    padding: 25px 35px; */
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover {
+    background: crimson;
+}
+
+.teams .carousel .card .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover .box {
+    transform: scale(1.05);
+}
+
+.teams .carousel .card .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+.teams .carousel .card img {
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 650px) {
+    .teams .carousel .card img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 800px) {
+    .teams .carousel .card img {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+    .teams .carousel .card img {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media (max-width: 350px) {
+    .teams .carousel .card img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 150px) {
+    .teams .carousel .card img {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+.teams .carousel .card:hover img {
+    border-color: #fff;
+}
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active,
+.owl-dot:hover {
+    background: crimson!important;
+}
+
+.carousel-inner img {
+    width: 60% !important;
+    height: 60% !important;
+}
+
+
+/* Popup container - can be anything you want */
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* The actual popup */
+
+.popuptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 50%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+/* Popup arrow */
+
+.popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+/* Toggle this class - hide and show the popup */
+
+.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+/* Add animation (fade in the popup) */
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    background-color: rgb(238, 61, 164);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

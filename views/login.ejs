@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>CIDUSFACE HOTEL Login page</title>
+</head>
+
+<body>
+    <nav class="navbar desktop-view">
+        <h1>CIDUSFACE HOTEL</h1>
+        <button class="btn"><a href="/">Home</a></button>
+        <button class="btn"><a href="/register">Create account</a></button>
+        <button class="btn active btn-primary" href="#">Login</button>
+        <button class="btn"><a href="/booking">Make Reservation</a></button>
+        <button class="btn"><a href="/innerview">Rooms</a></button>
+    </nav>
+
+    <!-- Mobile navbar -->
+    <div class="mobile-container mobile-nav" style="background-color: rgba(0, 0, 0, 0.534) !important;">
+        <div class="topnav">
+            <a href="#home" class="active">CIDUSFACE HOTEL</a>
+            <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+            <br>
+            <div id="myLinks">
+                <a href="/">Home</a>
+                <a href="/register">Create account</a>
+                <a href="/booking">Reserve Room</a>
+                <a href="/innerview">Check Innerview</a>
+            </div>
+
+        </div>
+    </div>
+    <script src="/script.js"></script>
+
+    <div class="container-fluid">
+        <h2 style="text-align: center;">CIDUSFACE HOTEL ONLINE RESERVATION SYSTEM</h2>
+        <% if(welcome_msg !== ''){%>
+            <div class='container alert alert-info alert-dismissible' style="width: fit-content; color:darkorange; font-size: large;">
+                <%- welcome_msg %>
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            </div>
+            <%}%>
+                <div class="row">
+                    <div class="col-7">
+                        <!-- <img src="../images/hotel15.jpg" style="width: 100%; height: 110%;"> -->
+                        <div class="container">
+                            <p>In CIDUSFACE we make home out of strangers. Customer comfortability is our priority</p>
+                        </div>
+                    </div>
+                    <div class="col-5" style="border: chartreuse; align-self: center;">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Login</h2><span>Enter your email and password to login</span>
+                            </div>
+                            <div class="card-body">
+                                <!-- messages here -->
+                                <div>
+                                    <% if(errors !== ''){%>
+                                        <% errors.forEach(function(item){%>
+                                            <div class='alert alert-danger'>
+                                                <%- item %>
+                                            </div>
+                                            <%})%>
+                                                <%}%>
+                                </div>
+                                <form name="loginForm" action="/login" onsubmit="return validateLoginForm()" method="POST">
+                                    <div class="form-group">
+                                        <label for="email"><i class="fa fa-user"></i></label>
+                                        <input type="email" placeholder="Enter email" class="form-control" id="email" name="email" value="<%= user.email %>" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password"><i class="fa fa-key"></i></label>
+                                        <input type="password" placeholder="Enter password" class="form-control" id="password" name="password" value="<%= user.password %>" required>
+                                    </div>
+                                    <hr>
+                                    <div class="button" style="text-align: center;">
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                        <a type="button" href="/forgotPassword" style="text-decoration: none;">Forgot password?</a>
+
+                                    </div>
+                                </form>
+                            </div>
+                            <div style="background-color: cadetblue; color: white; text-align: center;">
+                                <p>New user <a href="/register" style="text-decoration: none;">create</a> an account first</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+<footer class="desktop-view ">
+    <div class="container ">Copyright @ 2021 All rights Reserved. Power by <b>Nugi Technologies.</b>
+        <span>
+            Connect with us:
+            <i class="fa fa-mobile "></i> +2348127087575
+            <i class="fa fa-envelope "></i> Cidusface@yahoo.com
+            <a href="https://www.facebook.com/godwin.ugbe.52 "><i class="fab fa-facebook "></i></a>
+            <a href="https://twitter.com/IkpeUgbe "><i class="fab fa-twitter "></i></a>
+            <a href="https://web.skype.com/ "><i class="fab fa-skype "></i></a>
+        </span>
+    </div>
+</footer>
+<footer class="mobile-container ">
+    <div class="container " style="font-size: xx-small; ">Copyright @ 2021 All rights Reserved. Power by <b>Nugi Technologies.</b>
+        <span>
+            Connect with us:
+            <i class="fa fa-mobile "></i> +2348127087575
+            <i class="fa fa-envelope "></i> Cidusface@yahoo.com
+            <a href="https://www.facebook.com/godwin.ugbe.52 "><i class="fab fa-facebook "></i></a>
+            <a href="https://twitter.com/IkpeUgbe "><i class="fab fa-twitter "></i></a>
+            <a href="https://web.skype.com/ "><i class="fab fa-skype "></i></a>
+        </span>
+    </div>
+</footer>
+
+
+</html>

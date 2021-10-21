@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet1" href="/style.css">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
+    <title>CIDUSFACE HOTEL</title>
+</head>
+
+<body>
+
+    <nav class="navbar desktop-view" style="background-color: rgb(39, 38, 38);">
+        <h1 style="color: brown;">CIDUSFACE HOTEL</h1>
+        <button class="btn active btn-primary" href="#">My Reservation</button>
+        <div class="dropdown" style="margin-right: 40px;">
+            <button type="button" class="btn dropdown-toggle btn-success" data-toggle="dropdown">User<i fa fa-caret></i></button>
+            <div class="dropdown-menu">
+                <a href="/booking" class="dropdown-item">Reserve more</a>
+                <form method="POST" action="/logout">
+                    <button class="dropdown-item">Logout</button>
+                </form>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Mobile navbar -->
+    <div class="mobile-container mobile-nav" style="background-color: rgba(0, 0, 0, 0.534) !important;">
+        <div class="topnav">
+            <a href="#home" class="active">CIDUSFACE HOTEL</a>
+            <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+            <br>
+            <div id="myLinks">
+                <a href="/">Home</a>
+                <a href="/login">Login</a>
+                <a href="/booking">Reserve Room</a>
+                <a href="/innerview">Rooms</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container-fluid">
+            <h2 style="color: red;">My Resevation: ID
+                <%= vUser.Id %>
+            </h2>
+            <hr>
+            <diV class="row">
+                <div class="col-6" style="border: 10px; border-color: cornflowerblue;">
+                    <p>
+                        <%= vUser.Cust_name %>, you reserved room
+                            <%= vUser.Room_Number %> for a duration of
+                                <%= vUser.Duration %> and you are expected to in on
+                                    <%= vUser.From_when %> and vacate the room on
+                                        <%= vUser.To_when %>
+
+                    </p>
+                </div>
+                <div class="col-4" style="border: 10px; border-color: darkgoldenrod;">
+
+                    <a type="button" class="btn btn-success" style="text-decoration: none;" href="/dashboard">Back to Profile</a>
+
+                </div>
+            </div>
+            <hr>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>CIDUSFACE HOTEL</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card" style="border: 5px solid; border-color: chocolate; width: fit-content;">
+            <div class="card-header">
+                <h6 style="text-align: center; color: deeppink;">CIDUS<b style="color: forestgreen;">FACE</b> HOTEL ONLINE RESERVATION SYSTEM</h6>
+            </div>
+            <div style="text-align: center;">
+                <h4>Booking slip</h4>
+                <p2><b>You reserved <%=bUser.Rooms%> Room(s)</p2>
+            </div>
+            <hr>
+            <p>Name:
+                <b style="color: brown;"><%=bUser.Cust_name%></b>
+                    </p>
+                    <p>Phone Number:
+                        <b style="color: brown;"><%=bUser.Phone_number%></b>
+                    </p>
+                    <p>Address:
+                        <b style="color: brown;"><%=bUser.Address%></b>
+                    </p>
+                    <p>Type of Room:
+                        <b style="color: brown;"><%=bUser.Room_type%></b>
+                    </p>
+                    <p>Number of Rooms:
+                        <b style="color: brown;"><%=bUser.Rooms%></b>
+                    </p>
+                    <p>Duration:
+                        <b style="color: brown;"><%=bUser.Duration%> day(s)</b>
+                    </p>
+                    <p>Check-In-Date:
+                        <b style="color: brown;"><%=bUser.From_when%></b>
+                    </p>
+                    <p>Check-Out-Date:
+                        <b style="color: brown;"> <%=bUser.To_when%></b>
+                    </p>
+                    <p>Number of Adults:
+                        <b style="color: brown;"> <%=bUser.Num_adults%></b>
+                    </p>
+                    <p>Number of Children:
+                        <b style="color: brown;"> <%=bUser.Num_Children%></b>
+                    </p>
+                    <p style="color: cornsilk; background-color: black; width: fit-content;">Amount:
+                        <b style="color: brown; background-color: none;"> N<%=bUser.Amount%></b>
+                    </p>
+                    <div>
+                        <p6>We look forward to see you with this slip to obatain a VIP welcome.</p6>
+                        <button onclick="window.print()" class="bnt bnt-primary">Print slip</button>
+                    </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/script.js"></script>
+    <title>CIDUSFACE HOTEL</title>
+</head>
+
+<body>
+    <nav class="navbar desktop-view">
+        <h1>CIDUSFACE HOTEL</h1>
+        <button class="btn"><a href="/">Home</a></button>
+        <button class="btn active btn-primary"><a href="/booking">Reservation</a></button>
+        <button class="btn"><a href="/innerview">Rooms</a></button>
+    </nav>
+    <!-- Mobile navbar -->
+    <div class="mobile-container mobile-nav" style="background-color: rgba(0, 0, 0, 0.534) !important;">
+        <div class="topnav">
+            <a href="#home" class="active">CIDUSFACE HOTEL</a>
+            <a href="/booking">Reservation</a>
+            <a href="javascript:void(0)" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+            <br>
+            <div id="myLinks">
+                <a href="/">Home</a>
+                <a href="/innerview">Rooms</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h2 style="text-align: center;">CIDUSFACE HOTEL ONLINE RESERVATION SYSTEM</h2>
+        <% if(msg !== ''){%>
+            <div class='container alert alert-info alert-dismissible' style="width: fit-content; color:darkorange; font-size: large;">
+                <%-msg %>
+                    <span style="margin-left: 15px; margin-right: 0%;"><a href="#" class="close" id="close" data-dismiss="alert" aria-label="close">&times;</a></span>
+            </div>
+            <%}%>
+
+                <div class="row">
+                    <div class="col-7">
+                        <!-- <img src="../images/hotel10.jpg" style="width: 100%; height: 100%;"> -->
+                        <div class="container" style="background-color: rgb(184, 174, 162);">
+                            <p>In CIDUSFACE we make home out of strangers. Customer's comfortabiity is our priority</p>
+                            <b style="font-size: x-large;">Fill in all fields appropriately to reserved your room(s).</b>
+                            <p style="font-style: italic;">You can either pay now with card/bank and get the payment receipt directly to your email. Or printout a booking slip to pay when you come.</p>
+                        </div>
+                    </div>
+                    <div class="col-5">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>Room Reservation Form</h2>
+                                <p></p>
+                            </div>
+                            <div class="card-body">
+                                <!-- Error messages here -->
+                                <% if(errors !== ''){%>
+                                    <div class='container alert alert-danger alert-dismissible' style="width: fit-content; color:darkorange; font-size: large;">
+                                        <%-errors %>
+                                            <a href="#" class="close" id="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                    </div>
+                                    <%}%>
+
+                                        <form action="/booking" method="POST">
+                                            <div class="form-group">
+                                                <label for="name">Name</label>
+                                                <input type="text" class="form-control" id="name" name="cust_name" value="<%= name %>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mobile">Phone Number</label>
+                                                <input type="text" class="form-control" id="mobile" name="mobile" value="<%= mobile%>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="address">Address</label>
+                                                <input type="text" class="form-control" id="address" name="address" value="<%= address%>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email</label>
+                                                <input type="text" class="form-control" id="email" name="email" value="<%= email%>" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="sex">Sex</label>
+                                                <select type="text" class="form-control" id="sex" name="sex" required>
+                                            <option></option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="maritalStatus">Marital Status</label>
+                                                <select type="text" class="form-control" id="maritalStatus" name="maritalStatus" required>
+                                            <option></option>
+                                            <option>Single</option>
+                                            <option>Married</option>
+                                        </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nAdults">Number of Adults</label>
+                                                <select type="number" class="form-control" id="nAdults" name="nAdults" required>
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nChildren">Number of Children</label>
+                                                <select type="number" class="form-control" id="nChildren" name="nChildren">
+                                            <option>0</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nRooms">Number of Room(s)</label>
+                                                <input type="number" class="form-control" id="nRooms" name="nRooms" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label for="duration">Duration(in days)</label>
+                                                <input type="number" class="form-control" id="duration" name="duration" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="roomtype">Type of Room</label>
+                                                <select type="text" class="form-control" id="roomtype" name="roomtype">
+                                                   <option value="">Chose room type</option>
+                                                   <option value="Lower class">Lower class</option>
+                                                   <option value="Middle class">Middle class</option>
+                                                   <option value="Higher class">Higher class</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="fromW">Check-in-date</label>
+                                                <input type="date" class="form-control" id="fromW" name="fromW" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="toW">Check-out-date</label>
+                                                <input type="date" class="form-control" id="toW" name="toW" required>
+                                            </div>
+                                            <div class="form-group sh1">
+                                                <label for="amount" style="color: rgba(95, 158, 160, 0.863); font-size: 1em;">Amount(N)</label>
+                                                <input type="text" value="" id="amount" name="amount">
+                                            </div>
+                                            <hr>
+                                            <div class="pulled-right">
+                                                <button type="submit" class="btn btn-primary">Book now</button>
+                                                <!-- <button style="border-radius: 10px; background-color: darkcyan; margin-left: 70px;"><a href="/" style="text-decoration: none; color: whitesmoke;">Home</a></button> -->
+                                            </div>
+                                        </form>
+                                        <script>
+                                            var nRooms = document.getElementById('nRooms');
+                                            var duration = document.getElementById('duration');
+                                            var roomtype = document.getElementById('roomtype');
+                                            var amount = document.getElementById('amount');
+                                            var checkin = document.getElementById('fromW');
+                                            var checkout = document.getElementById('toW');
+                                            console.log('Oouuuuu the script is working')
+
+                                            roomtype.addEventListener('change', cal_Amount);
+                                            checkin.addEventListener('input', checkDate);
+
+                                            /* Onchange function to calculate total amount */
+                                            function cal_Amount() {
+                                                const totalAmount1 = duration.value * nRooms.value * 6000;
+                                                const totalAmount2 = duration.value * nRooms.value * 10000;
+                                                const totalAmount3 = duration.value * nRooms.value * 15000;
+                                                const choice = roomtype.value;
+                                                if (choice === "Lower class") {
+                                                    amount.value = totalAmount1;
+                                                }
+                                                if (choice === "Middle class") {
+                                                    amount.value = totalAmount2;
+                                                } else
+                                                if (choice === "Higher class") {
+                                                    amount.value = totalAmount3;
+                                                }
+                                            }
+                                            // Oninput function to automatical set the checkout date
+                                            function checkDate() {
+                                                console.log(checkin.value);
+                                                // if (checkin.value < Date.now) {
+                                                //     console.log("That date is behind the current date");
+                                                //     console.log(Date.now);
+                                                //     checkin.value = +checkout.value;
+                                                // }
+                                                checkout.value = (checkin.value + (duration.value));
+                                            }
+                                        </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</body>
+<footer class="desktop-view ">
+    <div class="container ">Copyright @ 2021 All rights Reserved. Power by <b>Godwin at Nugi Technologies.</b>
+        <span>
+            Connect with us:
+            <i class="fa fa-mobile "></i> +2348127087575
+            <i class="fa fa-envelope "></i> Cidusface@yahoo.com
+            <a href="https://www.facebook.com/godwin.ugbe.52 "><i class="fab fa-facebook "></i></a>
+            <a href="https://twitter.com/IkpeUgbe "><i class="fab fa-twitter "></i></a>
+            <a href="https://web.skype.com/ "><i class="fab fa-skype "></i></a>
+        </span>
+    </div>
+</footer>
+<footer class="mobile-container ">
+    <div class="container " style="font-size: xx-small; ">Copyright @ 2021 All rights Reserved. Power by <b>Nugi Technologies.</b>
+        <span>
+            Connect with us:
+            <i class="fa fa-mobile "></i> +2348127087575
+            <i class="fa fa-envelope "></i> Cidusface@yahoo.com
+            <a href="https://www.facebook.com/godwin.ugbe.52 "><i class="fab fa-facebook "></i></a>
+            <a href="https://twitter.com/IkpeUgbe "><i class="fab fa-twitter "></i></a>
+            <a href="https://web.skype.com/ "><i class="fab fa-skype "></i></a>
+        </span>
+    </div>
+</footer>
+
+</html>

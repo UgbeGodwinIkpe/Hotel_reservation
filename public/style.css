@@ -1,0 +1,369 @@
+body {
+    background: url("../images/hotel25.jpg") no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+}
+
+nav {
+    /* background-color: rgb(129, 141, 113); */
+    color: #af1337 !important;
+    padding: 5px 30px;
+    display: flex;
+    justify-content: flex-end;
+    position: static;
+    top: 0;
+    width: 100%;
+    /* height: 80px; */
+}
+
+nav button a {
+    text-decoration: none !important;
+    font-size: large;
+    color: whitesmoke;
+}
+
+nav .btn-primary {
+    cursor: none !important;
+}
+
+nav button:hover {
+    background-color: blue !important;
+    color: whitesmoke !important;
+}
+
+nav button a:hover {
+    background-color: blue !important;
+    color: whitesmoke !important;
+}
+
+form .btn1 {
+    text-align: center;
+}
+
+form .btn1 .btn2 {
+    margin-left: 50px !important;
+}
+
+form button a {
+    text-decoration: none;
+    color: cornsilk;
+}
+
+form button {
+    margin-left: 10px;
+    /* margin-right: 20px; */
+    border-radius: 50px;
+    background-color: brown;
+}
+
+nav .dropdown button {
+    color: white;
+    background-color: black;
+    font-size: large;
+}
+
+.container {
+    align-content: center;
+    color: white;
+}
+
+.image .image-responsive img {
+    height: 25rem;
+    width: 22rem;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+
+/* teams section styling */
+
+.teams .title::after {
+    content: "CIDUSFACE HOTEL Inner-veiw";
+}
+
+.teams .carousel .card {
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.myb button a {
+    text-decoration: none;
+    color: floralwhite
+}
+
+.fa-eye {
+    color: rgb(36, 23, 26);
+    position: relative;
+}
+
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+div.card {
+    overflow-y: scroll !important;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+
+/* Add a green text color and a checkmark when the requirements are right */
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+
+/* Add a red text color and an "x" when the requirements are wrong */
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
+
+
+/* Make the image fully responsive */
+
+.carousel-inner img {
+    width: 30%;
+    height: 30%;
+}
+
+.carousel-inner {
+    align-items: center;
+}
+
+.myb form {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 80%;
+    font-weight: bolder;
+}
+
+.myb form input {
+    width: 130px;
+}
+
+footer {
+    background-color: rgb(233, 230, 231);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: justify;
+    color: rgb(34, 26, 26);
+}
+
+footer .container {
+    text-align: center;
+    color: black !important;
+}
+
+footer .row {
+    margin-left: 20px;
+    margin-right: 5px;
+}
+
+footer .row .vl {
+    border-left: 1px solid black;
+}
+
+footer header {
+    width: fit-content;
+    color: coral;
+    font-size: large;
+}
+
+footer .container a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+form .form-group #amount {
+    cursor: none;
+    width: fit-content;
+}
+
+form .sh1 input {
+    cursor: none;
+    width: fit-content;
+    border: none !important;
+    color: rgba(197, 24, 231, 0.726);
+    font-size: xx-large;
+}
+
+
+/* Media view query */
+
+.show {
+    display: block;
+}
+
+@media screen and (min-width: 850px) {
+    .mobile-container {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    .dashf {
+        display: none!important;
+        visibility: hidden !important;
+    }
+    .avalibility {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    .row .col-5 .card form {
+        width: 500px !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .row .col-5 .card form input {
+        width: 300px !important;
+    }
+    .row .col-5 .card form {
+        width: 350px !important;
+    }
+    .row .col-5 .card form select {
+        width: 350px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mobile-container {
+        width: 300px;
+    }
+    .row .col-5 .card {
+        width: 300px !important;
+    }
+    .row .col-5 .card form input {
+        width: 300px !important;
+    }
+    .row .col-5 .card form {
+        width: 220px !important;
+    }
+    .row .col-5 .card form select {
+        width: 200px !important;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .desktop-view {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    .avaliability {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    .row .col-7 {
+        display: none;
+        visibility: hidden;
+    }
+    .row .col-5 .card {
+        width: 500px !important;
+    }
+    .mobile-container {
+        display: block !important;
+        width: auto;
+        visibility: visible !important;
+    }
+    .mobile-nav {
+        position: relative;
+        top: 0;
+        margin-top: 0!important;
+    }
+    .dashboard {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    .avilibility {
+        width: 70%;
+    }
+}
+
+.mobile-container a {
+    text-decoration: none;
+    color: whitesmoke;
+    max-width: 480px;
+    margin: auto;
+    background-color: #555;
+    /* height: 500px; */
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+}
+
+.topnav #myLinks a {
+    display: block;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 1px 1px;
+    font-size: 17px;
+    display: inline;
+}
+
+.topnav .icon {
+    background: rgba(15, 12, 12, 0.76);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 10px;
+}
+
+.topnav a :hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.mobile-container .topnav .active {
+    background: #04AA6D;
+    color: white;
+    width: auto;
+    /* font-weight: 1000; */
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.avalibility {
+    background-color: thistle;
+    margin: 5px;
+}
